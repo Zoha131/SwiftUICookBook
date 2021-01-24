@@ -17,7 +17,9 @@ struct GroceryShopView: View {
           Image(systemName: "magnifyingglass")
             .foregroundColor(.gray)
             .padding(.horizontal, 18)
+
           TextField("Find food here...", text: .constant(""))
+            .keyboardType(.webSearch)
         }
         .frame(minHeight: 60)
         .background(
