@@ -10,8 +10,9 @@ import SwiftUI
 struct GroceryShopView: View {
   var body: some View {
     ScrollView {
-
       VStack(spacing: 20) {
+
+        // MARK: Search Bar
         HStack{
           Image(systemName: "magnifyingglass")
             .foregroundColor(.gray)
@@ -26,8 +27,9 @@ struct GroceryShopView: View {
         .padding(.top)
         .padding(.horizontal, 32)
 
+        // MARK: Ingredients Header
         HStack {
-          Text("Ingridients")
+          Text("Ingredients")
             .font(.headline)
             .fontWeight(.regular)
 
@@ -42,6 +44,7 @@ struct GroceryShopView: View {
         }
         .padding(.horizontal, 32)
 
+        // MARK: Ingredients
         LazyVGrid(
           columns: [
             GridItem(.flexible(minimum: 40, maximum: 80)),
@@ -54,7 +57,7 @@ struct GroceryShopView: View {
           ForEach( 1..<9 ) { id in
             VStack {
               ZStack {
-                Image("Ingridients\(id)")
+                Image("Ingredients\(id)")
               }
               .frame(width: 40, height: 40)
               .padding()
@@ -70,39 +73,72 @@ struct GroceryShopView: View {
         }
         .padding(.horizontal, 32)
 
-        ScrollView(.horizontal){
-          HStack {
-            let width: CGFloat = UIScreen.main.bounds.width - 50
-            let height: CGFloat = 200
+        // MARK: Slider
+        ScrollView(.horizontal, showsIndicators: false){
+          HStack(spacing: 16) {
+            Spacer(minLength: 16)
 
-            ForEach(0..<5) { id in
+            ForEach(0..<2) { id in
+              ZStack(alignment: .bottomLeading) {
+                Image("vegetable2")
+                  .resizable()
+                  .aspectRatio(16/7, contentMode: .fill)
 
+                VStack(alignment: .leading) {
+                  Text("Fresh Inside")
+                    .font(.headline)
+                    .fontWeight(.regular)
+                    .padding(.bottom, 3)
 
-              ZStack {
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .fill(Color.white)
-
+                  Text("Healthy Outside")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.green)
+                }
+                .padding(.all, 25)
               }
-              .frame(width: width, height: height)
-              .shadow(radius: 10)
+              .aspectRatio(16/7, contentMode: .fill)
+              .frame(width: UIScreen.main.bounds.width - 80)
               .padding(.vertical)
-              .padding(.leading, 10)
-
+              .shadow(radius: 7)
             }
+
+            Spacer(minLength: 16)
           }
         }
+
+        // MARK: Menu Header
+        HStack {
+          Text("Top Rated Menus")
+            .font(.headline)
+            .fontWeight(.regular)
+
+          Spacer()
+
+          Button(action: {}) {
+            Image(systemName: "chevron.right.circle")
+              .resizable()
+              .frame(width: 22, height: 22)
+              .foregroundColor(.green)
+          }
+        }
+        .padding(.horizontal, 32)
+
+
       }
     }
-    .navigationBarTitle(Text("Home"))
+    //.navigationBarTitle(Text("Home"))
     .navigationBarTitleDisplayMode(.inline)
     .navigationBarItems(
       leading: Button(action: {}) {
         Image("ic_menu")
           .foregroundColor(.black)
+          .padding(.leading)
       },
       trailing: Button(action: {}) {
         Image("ic_notification")
           .foregroundColor(.black)
+          .padding(.trailing)
       }
     )
     .navigationBarColor(.white)
