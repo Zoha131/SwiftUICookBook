@@ -28,21 +28,8 @@ struct GroceryShopView: View {
         .padding(.horizontal, 32)
 
         // MARK: Ingredients Header
-        HStack {
-          Text("Ingredients")
-            .font(.headline)
-            .fontWeight(.regular)
-
-          Spacer()
-
-          Button(action: {}) {
-            Image(systemName: "chevron.right.circle")
-              .resizable()
-              .frame(width: 22, height: 22)
-              .foregroundColor(.green)
-          }
-        }
-        .padding(.horizontal, 32)
+        GroceryHeader(title: "Ingredients", onClick: {})
+          .padding(.horizontal, 32)
 
         // MARK: Ingredients
         LazyVGrid(
@@ -54,10 +41,10 @@ struct GroceryShopView: View {
           ],
           spacing: 18
         ) {
-          ForEach( 1..<9 ) { id in
+          ForEach(GroceryIngredient.ingredients) { ingredient in
             VStack {
               ZStack {
-                Image("Ingredients\(id)")
+                Image(ingredient.image)
               }
               .frame(width: 40, height: 40)
               .padding()
@@ -66,7 +53,7 @@ struct GroceryShopView: View {
                   .stroke(Color.gray.opacity(0.25), style: StrokeStyle())
               )
 
-              Text("Coconut")
+              Text(ingredient.name)
                 .lineLimit(1)
             }
           }
@@ -78,19 +65,20 @@ struct GroceryShopView: View {
           HStack(spacing: 16) {
             Spacer(minLength: 16)
 
-            ForEach(0..<2) { id in
+            ForEach(GrocerySliderItem.items) { item in
               ZStack(alignment: .bottomLeading) {
-                Image("vegetable2")
+                Image(item.image)
                   .resizable()
                   .aspectRatio(16/7, contentMode: .fill)
+                  .clipShape(RoundedRectangle(cornerRadius: 12))
 
                 VStack(alignment: .leading) {
-                  Text("Fresh Inside")
+                  Text(item.title)
                     .font(.headline)
                     .fontWeight(.regular)
                     .padding(.bottom, 3)
 
-                  Text("Healthy Outside")
+                  Text(item.subTitle)
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(.green)
@@ -108,22 +96,21 @@ struct GroceryShopView: View {
         }
 
         // MARK: Menu Header
-        HStack {
-          Text("Top Rated Menus")
-            .font(.headline)
-            .fontWeight(.regular)
+        GroceryHeader(title: "Top Rated Recipe", onClick: {})
+          .padding(.horizontal, 32)
 
-          Spacer()
-
-          Button(action: {}) {
-            Image(systemName: "chevron.right.circle")
-              .resizable()
-              .frame(width: 22, height: 22)
-              .foregroundColor(.green)
+        // MARK: Menu
+        LazyVGrid(
+          columns: [
+            GridItem(.adaptive(minimum: 120, maximum: 200), spacing: 18)
+          ],
+          spacing: 32
+        ){
+          ForEach(GroceryItem.items){ item in
+            GroceryItemView(groceryItem: item)
           }
         }
         .padding(.horizontal, 32)
-
 
       }
     }
