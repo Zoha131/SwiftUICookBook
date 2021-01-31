@@ -20,6 +20,7 @@
 		898FEFDD25BB6D5A0011F111 /* GroceryShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898FEFDC25BB6D5A0011F111 /* GroceryShopView.swift */; };
 		898FEFE125BB71650011F111 /* NavigationBarColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898FEFE025BB71650011F111 /* NavigationBarColorModifier.swift */; };
 		89B5A8C625B8CC86003DECA7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B5A8C525B8CC86003DECA7 /* SettingsView.swift */; };
+		89C246B625C71BBB003E290C /* OnboardingOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C246B525C71BBB003E290C /* OnboardingOne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		898FEFDC25BB6D5A0011F111 /* GroceryShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryShopView.swift; sourceTree = "<group>"; };
 		898FEFE025BB71650011F111 /* NavigationBarColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarColorModifier.swift; sourceTree = "<group>"; };
 		89B5A8C525B8CC86003DECA7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		89C246B525C71BBB003E290C /* OnboardingOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		894474D225A97B180008DFF1 /* SwiftUICookBook */ = {
 			isa = PBXGroup;
 			children = (
+				89C246B425C71B85003E290C /* Day 1 */,
 				898FEFDB25BB6D410011F111 /* Grocery Shop */,
 				89B5A8C425B8CC5F003DECA7 /* Settings */,
 				894474D325A97B180008DFF1 /* SwiftUICookBookApp.swift */,
@@ -118,6 +121,14 @@
 				89B5A8C525B8CC86003DECA7 /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		89C246B425C71B85003E290C /* Day 1 */ = {
+			isa = PBXGroup;
+			children = (
+				89C246B525C71BBB003E290C /* OnboardingOne.swift */,
+			);
+			path = "Day 1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 				898FEFDD25BB6D5A0011F111 /* GroceryShopView.swift in Sources */,
 				89B5A8C625B8CC86003DECA7 /* SettingsView.swift in Sources */,
 				89539CA925BDFB33006ADBE2 /* GroceryReview.swift in Sources */,
+				89C246B625C71BBB003E290C /* OnboardingOne.swift in Sources */,
 				894474D625A97B180008DFF1 /* ContentView.swift in Sources */,
 				89539CA625BDE593006ADBE2 /* GroceryHeader.swift in Sources */,
 				89539CAC25BDFBE8006ADBE2 /* GroceryItemView.swift in Sources */,
