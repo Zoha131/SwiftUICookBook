@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8939702C25CA13DF001705FC /* OnboardingTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939702B25CA13DF001705FC /* OnboardingTwo.swift */; };
 		894474D425A97B180008DFF1 /* SwiftUICookBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894474D325A97B180008DFF1 /* SwiftUICookBookApp.swift */; };
 		894474D625A97B180008DFF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894474D525A97B180008DFF1 /* ContentView.swift */; };
 		894474D825A97B180008DFF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894474D725A97B180008DFF1 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8939702B25CA13DF001705FC /* OnboardingTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTwo.swift; sourceTree = "<group>"; };
 		894474D025A97B180008DFF1 /* SwiftUICookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894474D325A97B180008DFF1 /* SwiftUICookBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICookBookApp.swift; sourceTree = "<group>"; };
 		894474D525A97B180008DFF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8939702925CA13CC001705FC /* Day 2 */ = {
+			isa = PBXGroup;
+			children = (
+				8939702B25CA13DF001705FC /* OnboardingTwo.swift */,
+			);
+			path = "Day 2";
+			sourceTree = "<group>";
+		};
 		894474C725A97B170008DFF1 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		894474D225A97B180008DFF1 /* SwiftUICookBook */ = {
 			isa = PBXGroup;
 			children = (
+				8939702925CA13CC001705FC /* Day 2 */,
 				89C246B425C71B85003E290C /* Day 1 */,
 				898FEFDB25BB6D410011F111 /* Grocery Shop */,
 				89B5A8C425B8CC5F003DECA7 /* Settings */,
@@ -212,6 +223,7 @@
 				89539CA625BDE593006ADBE2 /* GroceryHeader.swift in Sources */,
 				89539CAC25BDFBE8006ADBE2 /* GroceryItemView.swift in Sources */,
 				894474D425A97B180008DFF1 /* SwiftUICookBookApp.swift in Sources */,
+				8939702C25CA13DF001705FC /* OnboardingTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
